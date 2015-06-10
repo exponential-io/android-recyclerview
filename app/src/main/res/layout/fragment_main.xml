@@ -6,8 +6,15 @@
     tools:context="io.exponential.androidrecyclerview.MainFragment">
 
     <TextView
+        android:id="@+id/fragment_title"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/fragment_main_title"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/cars"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
 
 </RelativeLayout>
