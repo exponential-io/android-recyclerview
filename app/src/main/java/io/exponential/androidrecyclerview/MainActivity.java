@@ -1,17 +1,24 @@
 package io.exponential.androidrecyclerview;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends AppCompatActivity
+    implements MainFragment.Callbacks {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        getSupportFragmentManager()
+            .beginTransaction()
+            .add(R.id.container, MainFragment.newInstance())
+            .commit();
     }
 
     @Override
@@ -34,5 +41,10 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void setHomePage(String name) {
+        Toast.makeText(MainActivity.this, "Clicked: " + name, Toast.LENGTH_SHORT).show();
     }
 }
