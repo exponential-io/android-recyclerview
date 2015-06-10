@@ -2,6 +2,7 @@
 
 Learn the Android RecyclerView
 
+# Section 1: Create RecyclerView
 
 ## Create project
 
@@ -129,3 +130,19 @@ git commit message: create RecyclerView instance in MainFragment
 At this point you can run your application. You will see a list of cars displayed in the
 `RecyclerView`. Up next, we'll add the ability to handle `RecyclerView` touch events.
 
+
+# Section 2: Add event handlers to RecyclerView
+
+## Create an event handler for `RecyclerView` in `MainFragment`
+
+git commit message: create event handler for RecyclerView
+
+**Step-by-step**
+
+- Update the `onCreateView` method in `MainFragment` as follows:
+    - Create a new variable to hold the context: `Context context = getActivity();`.
+    - Replace `getActivity()` with `context` everywhere in the method.
+    - Create a new `GestureDetector` so that we can override the `onSingleTapUp` method. We need to
+      override this method to inform Android that we have handled the single tap event via:
+      `final GestureDetector gestureDetector = new GestureDetector`. [Source]()
+    - Bind the listeners to the `RecyclerView` via `carsRecyclerView.addOnItemTouchListener`.
