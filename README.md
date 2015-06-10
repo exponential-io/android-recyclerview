@@ -123,7 +123,7 @@ git commit message: create RecyclerView instance in MainFragment
 
 **Step-by-step**
 
-- Update `MainFragment`: (Source)[https://github.com/exponential-io/android-recyclerview/commit/542887267a18fd9d6dc894b3f952b3824fc626c8]
+- Update `MainFragment`: [Source](https://github.com/exponential-io/android-recyclerview/commit/542887267a18fd9d6dc894b3f952b3824fc626c8)
 
 
 At this point you can run your application. You will see a list of cars displayed in the
