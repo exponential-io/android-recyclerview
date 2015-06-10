@@ -2,6 +2,7 @@
 
 Learn the Android RecyclerView
 
+
 ## Create project
 
 git commit message: initial commit; project created
@@ -10,6 +11,7 @@ git commit message: initial commit; project created
 
 - Create new project with a blank Activity.
 
+
 ## Create a new Fragment
 
 git commit message: create new Fragment
@@ -17,6 +19,7 @@ git commit message: create new Fragment
 **Step-by-step**
 
 - Create a new blank Fragment named `MainFragment`.
+
 
 ## Update the Fragment
 
@@ -71,6 +74,7 @@ git commit message: add RecyclerView to fragment's layout
 
 - Update `fragment_main.xml` as follows:
     - Add an id to the `TextView`: android:id="@+id/fragment_title"
+    - Update the height attribute of `TextView`: `android:layout_height="wrap_content"`
     - Add the following `RecyclerView` below the `TextView:
 
 ```xml
@@ -82,6 +86,7 @@ git commit message: add RecyclerView to fragment's layout
         android:layout_below="@id/fragment_title"/>
 ```
 
+
 ## Create a layout for the `RecyclerView` row
 
 git commit message: add item layout
@@ -91,18 +96,36 @@ git commit message: add item layout
 - Create a new file named `res/layout/car.xml`. [Source](https://github.com/exponential-io/android-recyclerview/blob/master/app/src/main/res/layout/car.xml)
 
 
-## XXXX
+## Create `Car.java` as a simple data model
 
-git commit message: YYY
-
-**Step-by-step**
-
--
-
-## XXXX
-
-git commit message: YYY
+git commit message: create data model
 
 **Step-by-step**
 
--
+- Create a new Java class named `Car`.
+    - Create 2 private members (both String) named `make` and `model`.
+    - Create a simple constructor that requires both members to be set.
+    - Define a getter and setter for both private members.
+
+
+## Create the `CarAdapter`
+
+git commit message: create the adapter
+
+**Step-by-step**
+
+- Create a new Java class named `CarAdapter`. [Source](https://github.com/exponential-io/android-recyclerview/blob/master/app/src/main/java/io/exponential/androidrecyclerview/CarAdapter.java)
+
+
+## Set the `RecyclerView` adapter and layout manager
+
+git commit message: create RecyclerView instance in MainFragment
+
+**Step-by-step**
+
+- Update `MainFragment`: (Source)[https://github.com/exponential-io/android-recyclerview/commit/542887267a18fd9d6dc894b3f952b3824fc626c8]
+
+
+At this point you can run your application. You will see a list of cars displayed in the
+`RecyclerView`. Up next, we'll add the ability to handle `RecyclerView` touch events.
+
