@@ -144,8 +144,11 @@ git commit message: create event handler for RecyclerView
     - Replace `getActivity()` with `context` everywhere in the method.
     - Create a new `GestureDetector` so that we can override the `onSingleTapUp` method. We need to
       override this method to inform Android that we have handled the single tap event via:
-      `final GestureDetector gestureDetector = new GestureDetector`. [Source]()
+      `final GestureDetector gestureDetector = new GestureDetector`. [Source](https://github.com/exponential-io/android-recyclerview/commit/8db614aa185516add0c7cf4b1104fbe8a3de3864)
     - Bind the listeners to the `RecyclerView` via `carsRecyclerView.addOnItemTouchListener`.
+- Update `fragment_main.xml`:
+    - Add the `android:clickable="true"` attribute to the `android.support.v7.widget.RecyclerView`
+      element.
 
 ## Pass event up to Activity
 
@@ -157,4 +160,5 @@ git commit message: pass RecyclerView event up to Activity
     - In `onInterceptTouchEvent`, delete the `Toast`.
     - In `onInterceptTouchEvent`, invoke `callbacks.setHomePage(message);`
 
-
+That's it. To start another Activity you would simply create an Intent and call `startActivity`
+in the implementation of `setHomePage` in `MainActivity`.
