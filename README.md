@@ -146,3 +146,15 @@ git commit message: create event handler for RecyclerView
       override this method to inform Android that we have handled the single tap event via:
       `final GestureDetector gestureDetector = new GestureDetector`. [Source]()
     - Bind the listeners to the `RecyclerView` via `carsRecyclerView.addOnItemTouchListener`.
+
+## Pass event up to Activity
+
+git commit message: pass RecyclerView event up to Activity
+
+**Step-by-step**
+
+- Update the `onCreateView` method in `MainFragment` as follows:
+    - In `onInterceptTouchEvent`, delete the `Toast`.
+    - In `onInterceptTouchEvent`, invoke `callbacks.setHomePage(message);`
+
+

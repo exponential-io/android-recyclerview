@@ -107,7 +107,7 @@ public class MainFragment extends Fragment {
                 if (childView != null && gestureDetector.onTouchEvent(e)) {
                     String message = "Clicked: " + carsDataset.get(rv.getChildPosition(childView)).getMake();
 
-                    Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+                    callbacks.setHomePage(message);
 
                     return true;
                 }
